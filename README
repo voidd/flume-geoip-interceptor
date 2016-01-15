@@ -1,2 +1,9 @@
 # flume-geoip-interceptor
 Event Interceptor which augments Flume Event with IP localisation based on MaxMind GeoIP
+
+# Usage example
+a1.sources.r1.interceptors = i1
+a1.sources.r1.interceptors.i1.type = ru.jilime.flume.GeoIPExtractor$Builder
+a1.sources.r1.interceptors.i1.preserveExisting = true
+a1.sources.r1.interceptors.i1.hostHeader = addressHeader
+a1.sources.r1.interceptors.i1.geoIPDatabase = /etc/flume-ng/conf/geoIp.dat
