@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.apache.flume:flume-ng-configuration:1.7.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/flume/flume-ng-configuration/1.7.0-SNAPSHOT/flume-ng-configuration-1.7.0-20151230.002728-15.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/flume/flume-ng-configuration/1.7.0-SNAPSHOT/flume-ng-configuration-1.7.0-20151230.002728-15-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/flume/flume-ng-configuration/1.7.0-SNAPSHOT/flume-ng-configuration-1.7.0-20151230.002728-15-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

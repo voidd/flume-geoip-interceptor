@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ru.jilime.flume</groupId>
+    <version>1.7-SNAPSHOT</version>
+    <artifactId>flume-geoip-interceptor</artifactId>
+    <packaging>jar</packaging>
+    <name>Flume GeoIP Interceptor</name>
+    <description>
+        Event Interceptor which augments Flume Event with IP localisation based on MaxMind GeoIP
+    </description>
+    <url>https://github.com/voidd/flume-geoip-interceptor</url>
+
+    <properties>
+        <geoip.version>1.2.5</geoip.version>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <index>true</index>
+                        <manifest>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                        </manifest>
+                    </archive>
+                    <finalName>${project.artifactId}-${project.version}</finalName>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-my-jar-with-dependenciess</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.kohsuke</groupId>
+            <artifactId>geoip</artifactId>
+            <version>${geoip.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.flume</groupId>
+            <artifactId>flume-ng-core</artifactId>
+            <version>1.7.0</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+</project>
